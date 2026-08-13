@@ -1,0 +1,1066 @@
+/* ==========================================================================
+   Vinay & Athira — Wedding Invitation
+   ========================================================================== */
+
+:root {
+  --ivory: #fbe9c3;
+  --ivory-deep: #f5d5a0;
+  --maroon: #5c0612;
+  --maroon-deep: #3a030c;
+  --maroon-soft: #7a1524;
+  --gold: #b8860b;
+  --gold-light: #d4af37;
+  --gold-pale: #f0dfa8;
+  --leaf: #4a5d3a;
+
+  --font-display: 'Cinzel', serif;
+  --font-verse: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --max-w: 1080px;
+  --section-pad: clamp(64px, 10vw, 120px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--maroon-deep);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--maroon);
+}
+
+/* ---------- Ambient background ---------- */
+.ambient-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(184, 134, 11, 0.07) 0, transparent 45%),
+    radial-gradient(circle at 92% 18%, rgba(92, 6, 18, 0.05) 0, transparent 40%),
+    radial-gradient(circle at 20% 85%, rgba(184, 134, 11, 0.06) 0, transparent 40%),
+    radial-gradient(circle at 88% 90%, rgba(92, 6, 18, 0.05) 0, transparent 45%);
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 20px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('mobile.png');
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.mobile-only {
+  display: block;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  .hero {
+    background-image: url('landscap.png');
+  }
+}
+
+@media (min-width: 768px) {
+  .couple-names {
+    white-space: nowrap;
+  }
+
+  .hero-content {
+    transform: translateX(-60px);
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
+
+.invocation {
+  font-family: var(--font-verse);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  margin: 0 0 28px;
+}
+
+.hero-motif {
+  width: 90px;
+  margin: 0 auto 20px;
+  color: var(--gold);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--maroon-soft);
+  margin: 0 0 18px;
+}
+
+.couple-names {
+  font-size: clamp(3rem, 10vw, 5.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+
+.couple-names span {
+  display: inline-block;
+}
+
+.couple-names .amp {
+  font-family: var(--font-verse);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+  font-size: 0.7em;
+  margin: 0 0.15em;
+}
+
+.hero-invite {
+  font-family: var(--font-verse);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-style: italic;
+  color: var(--maroon-soft);
+  margin: 6px 0 4px;
+}
+
+.hero-date {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+  color: var(--maroon);
+  letter-spacing: 0.04em;
+  margin: 4px 0 0;
+}
+
+.tagline {
+  font-family: var(--font-verse);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-style: italic;
+  color: var(--maroon-soft);
+  margin: 0 0 40px;
+}
+
+.save-date {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 40px;
+  border: 1px solid var(--gold-light);
+  position: relative;
+}
+
+.save-date::before,
+.save-date::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+  top: -6px;
+}
+
+.save-date::before {
+  left: -6px;
+}
+
+.save-date::after {
+  right: -6px;
+}
+
+.save-date-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--maroon-soft);
+}
+
+.save-date-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+  color: var(--maroon);
+  letter-spacing: 0.03em;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: var(--gold);
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+.dia {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.dia svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--gold);
+  stroke: none;
+}
+
+.dia .flame {
+  fill: var(--maroon);
+  opacity: 0.85;
+}
+
+@keyframes bob {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* ==========================================================================
+   SECTION SHARED
+   ========================================================================== */
+.parivar-section,
+.countdown-section,
+.events-section,
+.gallery-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('page 2.png');
+}
+
+/* Parivar section — warm yellow-peach theme (no background image) */
+.parivar-section {
+  background-image: none;
+  background-color: #f5d5a0;
+  background: radial-gradient(ellipse at top, #fbe9c3 0%, #f5d5a0 45%, #eec37a 100%);
+}
+
+@media (min-aspect-ratio: 1/1) {
+
+  .parivar-section,
+  .countdown-section,
+  .events-section,
+  .gallery-section {
+    background-image: url('page 2 landscap.png');
+  }
+
+  /* Keep parivar as color on landscape too */
+  .parivar-section {
+    background-image: none;
+    background: radial-gradient(ellipse at top, #fbe9c3 0%, #f5d5a0 45%, #eec37a 100%);
+  }
+}
+
+main section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--section-pad) 24px;
+  position: relative;
+}
+
+.page-divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.page-divider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.parivar-section>*,
+.countdown-section>*,
+.events-section>*,
+.gallery-section>* {
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* FIX: .page-divider is a direct child of these sections, so the rule above
+   (equal specificity, later in source order) was overriding its width/margin
+   with max-width:1080px + width:100%. This more-specific override wins
+   regardless of source order, restoring the full-bleed edge-to-edge divider. */
+.parivar-section>.page-divider,
+.countdown-section>.page-divider,
+.events-section>.page-divider,
+.gallery-section>.page-divider {
+  max-width: none;
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-eyebrow {
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 320px;
+  margin: 0 auto;
+  color: var(--gold);
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+}
+
+.divider i {
+  font-size: 0.85rem;
+}
+
+/* ---------- Flower Divider (Jasmine & Lotus Garland Style) ---------- */
+.flower-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 400px;
+  margin: 60px auto;
+  color: var(--gold-light);
+}
+
+.divider-line {
+  flex: 1;
+  height: 8px;
+}
+
+.flower-icon {
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.center-flower {
+  font-size: 1.3rem;
+  color: #e25c80;
+  /* Pink Lotus color */
+}
+
+.themed-card {
+  position: relative;
+  background: transparent !important;
+  border: none !important;
+  padding: 20px !important;
+  margin: 0 auto;
+  max-width: 480px;
+  box-shadow: none !important;
+}
+
+.card-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* ==========================================================================
+   VERSE
+   ========================================================================== */
+.verse-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.lotus {
+  color: var(--gold-light);
+  font-size: 1.6rem;
+  opacity: 0.6;
+  display: none;
+}
+
+.verse-card {
+  margin: 0;
+  max-width: 620px;
+}
+
+.verse-sanskrit {
+  font-family: var(--font-verse);
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  color: var(--maroon);
+  margin: 0 0 18px;
+}
+
+.verse-translation {
+  font-family: var(--font-verse);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--maroon-soft);
+  margin: 0 0 14px;
+}
+
+.verse-source {
+  display: block;
+  font-size: 0.75rem;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+.verse-note {
+  font-size: 0.85rem;
+  color: var(--maroon-soft);
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* ==========================================================================
+   PARIVAR
+   ========================================================================== */
+.parivar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.parivar-divider {
+  display: none;
+  justify-self: center;
+  align-self: center;
+  color: var(--gold-light);
+}
+
+.parivar-divider svg {
+  width: 20px;
+  height: 200px;
+}
+
+.parivar-divider line {
+  stroke: currentColor;
+  stroke-width: 1;
+}
+
+.parivar-divider circle {
+  fill: currentColor;
+}
+
+.parivar-card,
+.event-card {
+  text-align: center;
+  position: relative;
+  background: rgba(255, 250, 235, 0.97) !important;
+  border: 1px solid var(--gold-pale) !important;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(92, 6, 18, 0.04) !important;
+  padding: 36px 24px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.parivar-card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.parivar-card::before,
+.event-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--gold-pale);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+
+  .parivar-card,
+  .event-card {
+    padding: 50px 36px 40px !important;
+  }
+}
+
+.parivar-kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px;
+}
+
+.parivar-name {
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  margin-bottom: 18px;
+}
+
+.parivar-line {
+  font-size: 0.92rem;
+  color: var(--maroon-soft);
+  margin: 0 0 14px;
+  line-height: 1.7;
+}
+
+.parivar-line strong {
+  color: var(--maroon);
+  font-weight: 600;
+}
+
+.parivar-address {
+  font-size: 0.82rem;
+  color: var(--maroon-soft);
+  opacity: 0.85;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.parivar-address i {
+  color: var(--gold);
+}
+
+/* ==========================================================================
+   COUNTDOWN
+   ========================================================================== */
+.countdown-section {
+  text-align: center;
+  background-image: url('page 3.png') !important;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  .countdown-section {
+    background-image: url('page 3 landscap.png') !important;
+  }
+}
+
+.countdown-sub {
+  font-family: var(--font-verse);
+  font-style: italic;
+  color: var(--maroon-soft);
+  margin: -30px 0 44px;
+  font-size: 1.05rem;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.countdown-box {
+  border: 1px solid var(--gold-light);
+  padding: 20px 8px;
+  position: relative;
+  background: var(--ivory);
+}
+
+.countdown-box::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--gold-pale);
+  pointer-events: none;
+}
+
+.countdown-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  color: var(--maroon);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 6px;
+}
+
+/* ==========================================================================
+   EVENTS
+   ========================================================================== */
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+
+
+.event-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.event-kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 8px;
+}
+
+.event-title {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.event-date,
+.event-time {
+  font-size: 0.9rem;
+  color: var(--maroon-soft);
+  margin: 0 0 4px;
+}
+
+.event-venue {
+  font-size: 0.95rem;
+  color: var(--maroon);
+  margin: 14px 0 24px;
+  line-height: 1.5;
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-map,
+.btn-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-map {
+  background: var(--maroon);
+  color: var(--ivory);
+  border-color: var(--maroon);
+}
+
+.btn-map:hover {
+  background: var(--maroon-deep);
+  transform: translateY(-2px);
+}
+
+.btn-directions {
+  color: var(--maroon);
+}
+
+.btn-directions:hover {
+  background: var(--gold-light);
+  color: var(--maroon-deep);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   GALLERY
+   ========================================================================== */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.gallery-frame {
+  background: var(--ivory-deep);
+  border: 1px solid var(--gold-pale);
+  padding: 8px;
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  flex: 1 1 320px;
+  box-sizing: border-box;
+}
+
+.frame-inner {
+  width: 100%;
+  border: 1px solid var(--gold-light);
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.frame-inner:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+.gallery-note {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--maroon-soft);
+  opacity: 0.7;
+  margin-top: 22px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.ashirwad {
+  text-align: center;
+  padding: var(--section-pad) 24px calc(var(--section-pad) + 40px);
+  background: var(--maroon-deep);
+  color: var(--ivory);
+}
+
+.footer-motif {
+  color: var(--gold-light);
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+
+.footer-thanks {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin: 0 0 20px;
+}
+
+.footer-message {
+  font-family: var(--font-verse);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  max-width: 480px;
+  margin: 0 auto 26px;
+  line-height: 1.6;
+  color: var(--ivory-deep);
+}
+
+.footer-couple {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--gold-light);
+  margin: 0 auto 22px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-contact {
+  font-size: 0.82rem;
+  color: var(--ivory-deep);
+  opacity: 0.85;
+}
+
+.footer-contact p {
+  margin: 4px 0;
+}
+
+.footer-contact a:hover {
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   AUDIO TOGGLE
+   ========================================================================== */
+.audio-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-light);
+  background: var(--maroon);
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  box-shadow: 0 6px 20px rgba(92, 6, 18, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.audio-toggle:hover {
+  transform: scale(1.08);
+}
+
+.audio-toggle.playing i {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+   REVEAL BASE STATE (GSAP animates from this)
+   ========================================================================== */
+[data-reveal],
+[data-reveal-stagger] {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* ==========================================================================
+   RESPONSIVE — DESKTOP
+   ========================================================================== */
+@media (min-width: 720px) {
+  .section-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .countdown-sub {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .lotus {
+    display: block;
+  }
+
+  .parivar-grid {
+    grid-template-columns: 1fr auto 1fr;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .parivar-divider {
+    display: block;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (min-width: 960px) {
+  .save-date {
+    padding: 24px 56px;
+  }
+}
+
+/* ==========================================================================
+   INVITATION COVER (OVERLAY)
+   ========================================================================== */
+.invitation-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4); /* normal dark backdrop blur instead of white */
+  padding: 20px;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.cover-card {
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(92, 6, 18, 0.15);
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  box-sizing: border-box;
+  background: var(--ivory);
+}
+
+.cover-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cover-card .btn-open-invitation {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.btn-open-invitation {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--maroon-deep);
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(184, 134, 11, 0.25);
+  animation: pulse-button 2s infinite;
+}
+
+.btn-open-invitation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(184, 134, 11, 0.4);
+  filter: brightness(1.05);
+}
+
+.cover-card .btn-open-invitation:hover {
+  transform: translate(-50%, -2px);
+}
+
+@keyframes pulse-button {
+  0% {
+    box-shadow: 0 8px 24px rgba(184, 134, 11, 0.25);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(184, 134, 11, 0.45);
+  }
+  100% {
+    box-shadow: 0 8px 24px rgba(184, 134, 11, 0.25);
+  }
+}
