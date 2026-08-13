@@ -1,203 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivek &amp; Sneha | Wedding Invitation</title>
-<meta name="description" content="Join us as we celebrate the wedding and reception of Vivek and Sneha — 13th September 2026.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0E0A06">
+  <title>Vivek &amp; Sneha — Wedding Invitation</title>
+  <meta name="description"
+    content="With love and joy — the wedding of Vivek and Sneha on Sunday, 13th September 2026.">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://vivek-sneha.vercel.app/">
-<meta property="og:title" content="Vivek &amp; Sneha | Wedding Invitation">
-<meta property="og:description" content="Together with our families, Mr. Vijayan & Mrs. Lekha cordially invite you to celebrate the wedding of their son Vivek with Sneha on 13th September 2026.">
-<meta property="og:image" content="https://vivek-sneha.vercel.app/og.jpg">
-<meta property="og:image:secure_url" content="https://vivek-sneha.vercel.app/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="900">
-<meta property="og:image:type" content="image/jpeg">
+  <!-- Social share preview (WhatsApp / Facebook / Telegram / iMessage) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vivek &amp; Sneha">
+  <meta property="og:title" content="Vivek &amp; Sneha — Wedding Invitation">
+  <meta property="og:description" content="Sunday, 13th September 2026 · Arattuchira, Puthuppally">
+  <meta property="og:url" content="https://vivek-sneha.vercel.app/">
+  <meta property="og:image" content="https://vivek-sneha.vercel.app/assets/images/share/sneha-vivek-og.jpg">
+  <meta property="og:image:secure_url" content="https://vivek-sneha.vercel.app/assets/images/share/sneha-vivek-og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vivek and Sneha — Wedding Invitation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vivek &amp; Sneha — Wedding Invitation">
+  <meta name="twitter:description" content="Sunday, 13th September 2026 · Arattuchira, Puthuppally">
+  <meta name="twitter:image" content="https://vivek-sneha.vercel.app/assets/images/share/sneha-vivek-og.jpg">
+  <link rel="image_src" href="https://vivek-sneha.vercel.app/assets/images/share/sneha-vivek-og.jpg">
+  <!-- Favicon & home-screen icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icons/icon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/icon-192.png">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://vivek-sneha.vercel.app/">
-<meta name="twitter:title" content="Vivek &amp; Sneha | Wedding Invitation">
-<meta name="twitter:description" content="Together with our families, Mr. Vijayan & Mrs. Lekha cordially invite you to celebrate the wedding of their son Vivek with Sneha on 13th September 2026.">
-<meta name="twitter:image" content="https://vivek-sneha.vercel.app/og.jpg">
+  <!-- Android Chrome / Samsung Internet web-app manifest -->
+  <link rel="manifest" href="site.webmanifest">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Android fallback thumbnail for older browsers / share sheets -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Vivek &amp; Sneha">
+  <meta name="msapplication-TileImage" content="assets/images/icons/icon-192.png">
+  <meta name="msapplication-TileColor" content="#0E0A06">
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Marcellus&family=Jost:wght@200;300;400;500&family=Noto+Sans+Malayalam:wght@300;400;500&display=swap">
 
-<link rel="stylesheet" href="style.css">
+  <!-- Critical media only: cover, intro video, hero -->
+  <link rel="preload" as="image" href="assets/images/cover/cover.png" fetchpriority="high">
+  <link rel="preload" as="video" href="assets/video/video.mp4" type="video/mp4">
+  <link rel="preload" as="audio" href="assets/audio/inkem-inkem_g300U6Yp.mp3" type="audio/mpeg">
+  <link rel="preload" as="image" href="assets/images/hero/hero-alt.png">
+  <link rel="preload" as="image" href="assets/images/hero/hero.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/scenes.css">
 </head>
-<body>
 
-<!-- ============ INVITATION COVER (OVERLAY) ============ -->
-<div class="invitation-cover" id="invitationCover">
-  <div class="cover-card">
-    <img src="og.jpg" alt="Vivek & Sneha Wedding Invitation" class="cover-img">
-    <button class="btn-open-invitation" id="btnOpenInvitation">
-      <i class="fa-solid fa-envelope-open"></i> OPEN INVITATION
-    </button>
-  </div>
-</div>
+<body class="is-locked">
 
-<!-- Ambient rangoli dot field -->
-<div class="ambient-field" aria-hidden="true"></div>
+  <!-- ============================================================
+     ICON SPRITE  ·  all decorative motifs are inline SVG
+     ============================================================ -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-lotus" viewBox="0 0 64 64">
+        <path d="M32 15c4.6 6.2 6.6 11.2 6.6 15.8S35.6 38.6 32 38.6s-6.6-3.2-6.6-7.8S27.4 21.2 32 15z" />
+        <path d="M25.4 31.4c-4.1-3.6-9.1-5.1-14.2-4.6.8 5.6 4.6 10.2 9.7 12.2" />
+        <path d="M38.6 31.4c4.1-3.6 9.1-5.1 14.2-4.6-.8 5.6-4.6 10.2-9.7 12.2" />
+        <path d="M12.6 34.4c-2.6 6.1 1 12.2 7.1 14.2 4.6 1.5 9.1 1.5 12.3 1s7.7.5 12.3-1c6.1-2 9.7-8.1 7.1-14.2" />
+      </symbol>
 
-<!-- ============ HERO ============ -->
-<header class="hero" id="hero">
-  <div class="hero-content"> 
-    <p class="eyebrow" data-reveal>Together with<br class="mobile-only"> their families</p>
-    <h1 class="couple-names" data-reveal>
-      <span>Vivek</span>
-      <span class="amp">&amp;</span><br class="mobile-only">
-      <span>Sneha</span>
-    </h1>
-    <p class="hero-invite" data-reveal>Mr. Vijayan &amp; Mrs. Lekha cordially invite you to celebrate the wedding of their son</p>
-    <p class="hero-date" data-reveal>Sunday, 13th September 2026</p>
-  </div>
-</header>
+      <symbol id="i-lamp" viewBox="0 0 64 64">
+        <path d="M32 5.5c2.7 3.6 4.1 6.3 4.1 8.7 0 2.5-1.8 4.3-4.1 4.3s-4.1-1.8-4.1-4.3c0-2.4 1.4-5.1 4.1-8.7z"
+          fill="currentColor" stroke="none" />
+        <path d="M17.5 23.5h29l-4.5 5.5H22z" />
+        <path d="M32 29v11.5" />
+        <path d="M23.5 40.5h17" />
+        <path d="M32 40.5v8.5" />
+        <path d="M19 57c0-3.6 5.8-6.5 13-6.5S45 53.4 45 57z" />
+      </symbol>
 
-<main>
- 
-  <!-- ============ PARIVAR ============ -->
-  <section class="parivar-section" id="parivar"> 
-    <p class="section-eyebrow" data-reveal>The Parivar</p>
-    <h2 class="section-title" data-reveal>With the Blessings Of</h2>
+      <symbol id="i-bell" viewBox="0 0 64 64">
+        <circle cx="32" cy="8.5" r="3" />
+        <path
+          d="M32 13c-7.2 0-12.4 6.1-12.4 14.3 0 8.2-2.1 12.3-5.1 15.4h35c-3-3.1-5.1-7.2-5.1-15.4C44.4 19.1 39.2 13 32 13z" />
+        <path d="M27.7 47.4a4.4 4.4 0 008.6 0" />
+      </symbol>
 
-    <div class="parivar-grid">
-      <article class="themed-card parivar-card groom-card" data-reveal-stagger>
-        <div class="card-content">
-          <p class="parivar-kicker">The Groom</p>
-          <h3 class="parivar-name">Vivek</h3>
-          <p class="parivar-line">Son of<br><strong>Mr. Vijayan &amp;<br>Mrs. Lekha</strong></p>
-          <p class="parivar-address">Arathiparampil, Valappad,<br>Thrissur District</p>
-        </div>
-      </article>
+      <symbol id="i-leaf" viewBox="0 0 64 64">
+        <path d="M53 9C30.6 11.2 14.2 25.6 12 48c0 4.2 2 6.3 5.2 6.3C37.6 52.1 51 36 53 9z" />
+        <path d="M53 9L17.2 54.3" />
+        <path d="M45 16.5l-6.5 14.2M36.8 20.8l-6.5 14.2M28.6 26.4l-5.6 12.6" />
+      </symbol>
 
-      <div class="parivar-divider" aria-hidden="true">
-        <svg viewBox="0 0 40 200"><line x1="20" y1="0" x2="20" y2="200"/><circle cx="20" cy="100" r="5"/></svg>
+      <symbol id="i-jasmine" viewBox="0 0 64 64">
+        <path d="M4 20c8 10 16 15 28 15s20-5 28-15" />
+        <circle cx="12" cy="27.5" r="3.2" />
+        <circle cx="22" cy="33" r="3.6" />
+        <circle cx="32" cy="35.4" r="4" />
+        <circle cx="42" cy="33" r="3.6" />
+        <circle cx="52" cy="27.5" r="3.2" />
+        <path d="M32 39.4v7M22 37v6M42 37v6" />
+      </symbol>
+
+      <symbol id="i-ring" viewBox="0 0 64 64">
+        <circle cx="23" cy="34" r="14" />
+        <circle cx="41" cy="34" r="14" />
+      </symbol>
+
+      <symbol id="i-calendar" viewBox="0 0 64 64">
+        <rect x="9" y="14" width="46" height="42" rx="5" />
+        <path d="M9 27h46M21 8v11M43 8v11" />
+        <circle cx="22" cy="38" r="2.4" fill="currentColor" stroke="none" />
+        <circle cx="32" cy="38" r="2.4" fill="currentColor" stroke="none" />
+        <circle cx="42" cy="38" r="2.4" fill="currentColor" stroke="none" />
+      </symbol>
+
+      <symbol id="i-clock" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="24" />
+        <path d="M32 17v16l11 7" />
+      </symbol>
+
+      <symbol id="i-pin" viewBox="0 0 64 64">
+        <path d="M32 58s18-17.4 18-30A18 18 0 1014 28c0 12.6 18 30 18 30z" />
+        <circle cx="32" cy="27" r="6.5" />
+      </symbol>
+
+      <symbol id="i-phone" viewBox="0 0 64 64">
+        <path
+          d="M22 8l8 12-6 6c3.4 7 8.6 12.2 15.6 15.6l6-6 12 8-4 8c-1.6 3.2-5 4.6-9 3.6C29 51.6 12.4 35 8.4 17.4 7.4 13.4 8.8 10 12 8.4z" />
+      </symbol>
+
+      <symbol id="i-pillar" viewBox="0 0 64 64">
+        <path d="M12 12h40M15 20h34M20 20v28M44 20v28M15 48h34M11 56h42" />
+      </symbol>
+
+      <symbol id="i-kalasham" viewBox="0 0 64 64">
+        <path
+          d="M21 27h22l-2.6 6.6c-.7 1.9-.7 4 0 5.9l1.9 5.1c1.5 4-1.4 8.4-5.7 8.4H27.4c-4.3 0-7.2-4.4-5.7-8.4l1.9-5.1c.7-1.9.7-4 0-5.9z" />
+        <path d="M18.5 22.5h27V27h-27z" />
+        <path d="M27 22.5c-4.5-1.5-8-5.5-8.5-10.5 4.8.3 9 2.8 11 6.5" />
+        <path d="M37 22.5c4.5-1.5 8-5.5 8.5-10.5-4.8.3-9 2.8-11 6.5" />
+        <path d="M32 22.5c-2.6-3-2.6-7 0-10 2.6 3 2.6 7 0 10z" />
+        <path d="M25 55h14" />
+      </symbol>
+    </defs>
+  </svg>
+
+
+  <!-- ============================================================
+     GLOBAL PARTICLE FIELD  ·  landing → footer
+     ============================================================ -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+
+  <!-- ============================================================
+     1 · LANDING COVER
+     ============================================================ -->
+  <section id="landing" class="scene--screen" aria-label="Wedding invitation cover">
+    <div class="landing-media">
+      <img id="coverImg" class="cover-img section-bg" src="assets/images/cover/cover.png"
+        data-fallbacks="assets/images/cover/cover.webp,assets/images/cover/cover.jpg" alt="" decoding="async"
+        fetchpriority="high">
+      <div class="cover-fallback" aria-hidden="true"></div>
+    </div>
+
+    <div class="rays rays--warm" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="temple-glow" aria-hidden="true"></div>
+    <div class="section-overlay landing-overlay" aria-hidden="true"></div>
+
+    <div class="landing-inner section-content">
+      <p class="landing-eyebrow">
+        <span class="ml">ശ്രീ ഗുരുവായൂരപ്പൻ തുണ</span>
+        <span class="en"
+          style="color:#fff;letter-spacing:.22em;font-weight:700;text-shadow:0 1px 8px rgba(0,0,0,.7),0 0 20px rgba(0,0,0,.5);">WITH
+          THE BLESSINGS OF LORD GURUVAYURAPPAN</span>
+      </p>
+
+      <div class="divider divider--sm" aria-hidden="true">
+        <span class="divider-line"></span>
+        <svg class="ico" aria-hidden="true">
+          <use href="#i-lotus"></use>
+        </svg>
+        <span class="divider-line"></span>
       </div>
 
-      <article class="themed-card parivar-card bride-card" data-reveal-stagger>
-        <div class="card-content">
-          <p class="parivar-kicker">The Bride</p>
-          <h3 class="parivar-name">Sneha</h3>
-          <p class="parivar-line">Daughter of<br><strong>Manoj &amp;<br>Asha Manoj</strong></p>
-          <p class="parivar-address">North Kaithakkad Arattuchira,<br>Payyappadi, Kottayam</p>
-        </div>
-      </article>
+      <h1 class="landing-names">
+        <span class="n" style="color:#ffffff;">Vivek</span>
+        <span class="amp">&amp;</span>
+        <span class="n" style="color:#ffffff;">Sneha</span>
+      </h1>
+
+      <p class="landing-date"
+        style="color:#fff;letter-spacing:.44em;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.6);">13 · 09 · 2026</p>
+
+      <button id="openBtn" class="btn-open" type="button">
+        <span class="btn-open__glow" aria-hidden="true"></span>
+        <span class="btn-open__ring" aria-hidden="true"></span>
+        <span class="btn-open__inner">
+          <svg class="ico btn-open__lamp" aria-hidden="true">
+            <use href="#i-lamp"></use>
+          </svg>
+          <span class="btn-open__label">
+            <span class="btn-open__en">Open Invitation</span>
+            <span class="btn-open__ml">ക്ഷണക്കത്ത് തുറക്കുക</span>
+          </span>
+        </span>
+        <span class="btn-open__shimmer" aria-hidden="true"></span>
+      </button>
+
+      <p class="landing-hint" aria-hidden="true">Tap to begin</p>
     </div>
   </section>
 
 
-
-  <!-- ============ COUNTDOWN ============ -->
-  <section class="countdown-section" id="countdown"> 
-    <p class="section-eyebrow" data-reveal>Shubh Muhurat</p>
-    <h2 class="section-title" data-reveal>Counting Down to the Sacred Vows</h2>
-    <p class="countdown-sub" data-reveal>13th September 2026 (1202 Chingam 28) · 10:30 AM IST</p>
-
-    <div class="countdown-grid" data-reveal>
-      <div class="countdown-box">
-        <span class="countdown-number" id="cd-days">00</span>
-        <span class="countdown-label">Days</span>
-      </div>
-      <div class="countdown-box">
-        <span class="countdown-number" id="cd-hours">00</span>
-        <span class="countdown-label">Hours</span>
-      </div>
-      <div class="countdown-box">
-        <span class="countdown-number" id="cd-mins">00</span>
-        <span class="countdown-label">Mins</span>
-      </div>
-      <div class="countdown-box">
-        <span class="countdown-number" id="cd-secs">00</span>
-        <span class="countdown-label">Secs</span>
-      </div>
-    </div>
+  <!-- ============================================================
+     2 · INVITATION REVEAL VIDEO
+     ============================================================ -->
+  <section id="reveal" aria-hidden="true">
+    <video id="revealVideo" muted playsinline webkit-playsinline preload="auto" disablepictureinpicture
+      controlslist="nodownload noplaybackrate noremoteplayback">
+      <source src="assets/video/video.mp4" type="video/mp4">
+    </video>
+    <div class="reveal-fade" aria-hidden="true"></div>
+    <button id="skipBtn" class="btn-skip" type="button" hidden>Skip</button>
   </section>
 
 
+  <!-- ============================================================
+     3 · THE SITE
+     ============================================================ -->
+  <main id="site">
 
-  <!-- ============ VIVAH UTSAV ============ -->
-  <section class="events-section" id="events">
-    <p class="section-eyebrow" data-reveal>Vivah Utsav</p>
-    <h2 class="section-title" data-reveal>Join Us In Celebration</h2>
+    <!-- ---------- HERO ---------- -->
+    <!-- Image fills the whole screen; content sits in that image's safe centre -->
+    <section id="hero" class="scene scene--screen scene--hero" aria-busy="true">
+      <picture class="section-bg">
+        <source id="heroSourceAvif" type="image/avif" data-hero-srcset="assets/images/hero/hero.avif">
+        <source id="heroSourceWebp" type="image/webp" data-hero-srcset="assets/images/hero/hero.webp">
+        <img id="heroImg" class="section-bg"
+          data-candidates="assets/images/hero/hero-alt.png,assets/images/hero/hero.png,assets/images/hero/hero.webp,assets/images/hero/hero.avif"
+          alt="" width="1080" height="1920" decoding="async" fetchpriority="high">
+      </picture>
 
-    <div class="events-grid">
-      <article class="themed-card event-card" data-reveal-stagger>
-        <div class="card-content">
-          <div class="event-icon"><i class="fa-solid fa-fire-flame-simple"></i></div>
-          <p class="event-kicker">Auspicious Time</p>
-          <h3 class="event-title">Thalikettu</h3>
-          <p class="event-date">Sunday, 13th September 2026 (1202 Chingam 28)</p>
-          <p class="event-time">10:30 AM – 11:30 AM</p>
-          <p class="event-venue">
-            Arattuchira Temple, Vellukutta, Puthuppally<br>
-            <span style="font-size: 0.88em; opacity: 0.9; margin-top: 4px; display: inline-block;">(Followed by Dining at St. Thomas Orthodox Church Parish Hall)</span>
+      <div class="section-overlay" aria-hidden="true"></div>
+
+      <div class="section-content">
+        <h1 class="hero-names"
+          style="color:#8B1A2A;text-shadow:0 2px 18px rgba(255,246,220,.5), 0 1px 0 rgba(255,246,220,.3);">
+          <span class="hero-names__n">Vivek</span>
+          <span class="hero-names__amp" aria-hidden="true">&amp;</span>
+          <span class="hero-names__n">Sneha</span>
+        </h1>
+
+        <p class="hero-date">
+          <span class="hero-date__en" style="color:#C1962F;letter-spacing:.18em;">Sunday · 13 September 2026</span>
+        </p>
+      </div>
+
+      <p class="hero-bless hero-bless--top">
+        <span class="hero-bless__ml">സ്നേഹാദരങ്ങളോടെ ക്ഷണിക്കുന്നു</span>
+        <span class="hero-bless__en" style="color:#C1962F;font-weight:500;letter-spacing:.22em;">CORDIALLY INVITING YOU &amp; YOUR FAMILY</span>
+      </p>
+
+      <p class="hero-chingam">ചിങ്ങം 28, 1202 &nbsp;·&nbsp; 10:30 AM – 11:30 AM</p>
+
+      <a class="scroll-indicator" href="#details" aria-label="Scroll to wedding details">
+        <span class="scroll-indicator__word">Scroll</span>
+        <svg class="scroll-indicator__arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path d="M12 5v14M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </section>
+
+
+    <!-- ---------- WEDDING DETAILS ---------- -->
+    <section id="details" class="scene scene--flow scene--ivory">
+      <img class="section-bg" src="assets/images/decorations/wash-ivory.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content">
+
+        <div class="sec-head reveal">
+          <p class="kicker">ക്ഷണക്കത്ത്</p>
+          <h2 class="sec-title">The Invitation</h2>
+          <div class="divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-lotus"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <p class="lede reveal" data-delay="1">
+          ഞങ്ങളുടെ മകൻ <em>വിവേകും</em> കോട്ടയം ജില്ലയിൽ പയ്യപ്പാടി കരയിൽ വടക്കേ കൈതക്കാട് വീട്ടിൽ ശ്രീ. മനോജിന്റെയും ശ്രീമതി. ആശ മനോജിന്റെയും മകൾ <em>സ്നേഹയും</em> തമ്മിലുള്ള വിവാഹം (താലികെട്ട്) 2026 സെപ്റ്റംബർ 13 (1202 ചിങ്ങം 28) ഞായറാഴ്ച 10.30നും 11.30നും മധ്യേയുള്ള ശുഭമുഹൂർത്തത്തിൽ മണർകാട് ദേവി ക്ഷേത്രത്തിൽ വെച്ചും തുടർന്ന് സൽക്കാരവും ഭക്ഷണവും പുതുപ്പള്ളി, അററ്റുചിറ (വെള്ളുകുട്ട) സെന്റ് തോമസ് ഓർത്തഡോക്സ് ചർച്ച് പാരിഷ് ഹാളിലും വെച്ച് നടക്കുകയാണ്. പ്രസ്തുത മംഗളകർമ്മത്തിലും തുടർന്നുള്ള സൽക്കാരത്തിലും താങ്കളുടെ സകുടുംബസാന്നിധ്യം സാദരം ക്ഷണിച്ചുകൊള്ളുന്നു.
+        </p>
+
+        <ul class="facts">
+          <li class="fact reveal" data-delay="1">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-calendar"></use>
+            </svg>
+            <span class="fact-k">Wedding Day</span>
+            <span class="fact-v">Sunday, 13 September 2026</span>
+            <span class="fact-s">ചിങ്ങം 28, 1202</span>
+          </li>
+          <li class="fact reveal" data-delay="2">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-clock"></use>
+            </svg>
+            <span class="fact-k">Thalikettu</span>
+            <span class="fact-v">10:30 AM – 11:30 AM</span>
+            <span class="fact-s">Manarcaud Devi Temple,Manarcad</span>
+          </li>
+           
+          <li class="fact reveal" data-delay="4">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-bell"></use>
+            </svg>
+            <span class="fact-k">Dining &amp; Feast</span>
+            <span class="fact-v">St. Thomas Church Parish Hall</span>
+            <span class="fact-s">Arattuchira, Puthuppally</span>
+          </li>
+          <li class="fact reveal" data-delay="5">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-pin"></use>
+            </svg>
+            <span class="fact-k">Reception</span>
+            <span class="fact-v">Zahra's International Convention Centre</span>
+            <span class="fact-s">Grand Reception</span>
+          </li>
+        </ul>
+
+        <div class="countdown reveal" data-delay="2" aria-label="Countdown to the wedding day">
+          <div class="cd-unit"><span class="cd-n" id="cdD">--</span><span class="cd-l">Days</span></div>
+          <span class="cd-sep" aria-hidden="true"></span>
+          <div class="cd-unit"><span class="cd-n" id="cdH">--</span><span class="cd-l">Hours</span></div>
+          <span class="cd-sep" aria-hidden="true"></span>
+          <div class="cd-unit"><span class="cd-n" id="cdM">--</span><span class="cd-l">Minutes</span></div>
+          <span class="cd-sep" aria-hidden="true"></span>
+          <div class="cd-unit"><span class="cd-n" id="cdS">--</span><span class="cd-l">Seconds</span></div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ---------- TIMELINE ---------- -->
+    <section id="timeline" class="scene scene--flow scene--ivory">
+      <img class="section-bg" src="assets/images/decorations/wash-ivory.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content">
+        <div class="sec-head reveal">
+          <p class="kicker">The Celebrations</p>
+          <h2 class="sec-title">Timeline</h2>
+          <div class="divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-bell"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <ol class="tl">
+          <!-- <li class="tl-item reveal" data-delay="1">
+          <span class="tl-node" aria-hidden="true"><svg class="ico"><use href="#i-ring"></use></svg></span>
+          <div class="tl-body">
+            <p class="tl-date">Sample Date — 12 July 2026 <span class="sample">SAMPLE</span></p>
+            <h3 class="tl-title">Engagement / Nischayam</h3>
+            <p class="tl-meta">Sample Venue Name, Sample Town, Kerala <span class="sample">SAMPLE</span></p>
+            <p class="tl-text">Engagement details were not printed on the invitation. Share the
+              date, time and venue and this card will be updated.</p>
+          </div>
+        </li> -->
+
+          <li class="tl-item reveal" data-delay="2">
+            <span class="tl-node tl-node--hi" aria-hidden="true"><svg class="ico">
+                <use href="#i-lamp"></use>
+              </svg></span>
+            <div class="tl-body">
+              <p class="tl-date">Sunday, 13th September 2026 · ചിങ്ങം 28, 1202</p>
+              <h3 class="tl-title">Thalikettu (Marriage Ceremony)</h3>
+              <p class="tl-meta">10:30 AM – 11:30 AM · Manarcaud Devi Temple, Manarcad</p>
+              <p class="tl-text">Thalikettu ceremony performed within the auspicious muhurtham.</p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-delay="3">
+            <span class="tl-node" aria-hidden="true"><svg class="ico">
+                <use href="#i-jasmine"></use>
+              </svg></span>
+            <div class="tl-body">
+              <p class="tl-date">Sunday, 13th September 2026</p>
+              <h3 class="tl-title">Wedding Feast &amp; Dining</h3>
+              <p class="tl-meta">St. Thomas Orthodox Church Parish Hall, Arattuchira (Vellukutta), Puthuppally</p>
+              <p class="tl-text">Dining and feast for guests following the Thalikettu ceremony.</p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal" data-delay="4">
+            <span class="tl-node" aria-hidden="true"><svg class="ico">
+                <use href="#i-bell"></use>
+              </svg></span>
+            <div class="tl-body">
+              <p class="tl-date">Sunday, 13th September 2026</p>
+              <h3 class="tl-title">Grand Reception</h3>
+              <p class="tl-meta">Zahra's International Convention Centre, Puthuppally, Kottayam</p>
+              <p class="tl-text">An evening of celebration, reception and blessings with family and friends.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ---------- BRIDE & GROOM ---------- -->
+    <section id="couple" class="scene scene--flow scene--dark">
+      <img class="section-bg" src="assets/images/decorations/wash-dark.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content">
+        <div class="sec-head reveal">
+          <!-- <p class="kicker">Bride &amp; Groom</p> -->
+          <h2 class="sec-title">Bride &amp; Groom</h2>
+          <div class="divider divider--light" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-lotus"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="couple-grid">
+          <article class="card card--person reveal" data-delay="1">
+            <svg class="ico card-ico" aria-hidden="true" style="width:34px;height:34px;color:var(--gold-lt);margin:0 auto 12px;">
+              <use href="#i-ring"></use>
+            </svg>
+            <p class="person-role">The Groom</p>
+            <h3 class="person-name">Vivek</h3>
+            <p class="person-line">Son of Mr.&nbsp;Vijayan &amp;
+              Mrs.&nbsp;Lekha Vijayan</p>
+            <p class="person-place">Arathiparampil House, Valappad, Thrissur District</p>
+          </article>
+
+          <div class="couple-knot" aria-hidden="true">
+            <span class="couple-initial">V</span>
+            <span class="couple-amp">&amp;</span>
+            <span class="couple-initial">S</span>
+          </div>
+
+          <article class="card card--person reveal" data-delay="2">
+            <svg class="ico card-ico" aria-hidden="true" style="width:34px;height:34px;color:var(--gold-lt);margin:0 auto 12px;">
+              <use href="#i-ring"></use>
+            </svg>
+            <p class="person-role">The Bride</p>
+            <h3 class="person-name">Sneha</h3>
+            <p class="person-line">D/o Mr.&nbsp;Manoj &amp;
+              Mrs.&nbsp;Asha Manoj</p>
+            <p class="person-place">Vadakke Kaithakkad, Arattuchira, Payyappadi P.O, Kottayam</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ---------- PARENTS & FAMILY ---------- -->
+    <section id="family" class="scene scene--flow scene--beige">
+      <img class="section-bg" src="assets/images/decorations/wash-beige.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content">
+        <div class="sec-head reveal">
+          <p class="kicker">With Love &amp; Blessings</p>
+          <h2 class="sec-title">Parents &amp; Family</h2>
+          <div class="divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-lamp"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="family-grid">
+          <article class="card card--family reveal" data-delay="1">
+            <svg class="ico card-ico" aria-hidden="true">
+              <use href="#i-pillar"></use>
+            </svg>
+            <p class="family-tag">Groom's Family (Inviting)</p>
+            <h3 class="family-name">Vijayan</h3>
+            <p class="family-amp">&amp;</p>
+            <h3 class="family-name">Lekha Vijayan</h3>
+            <p class="family-home">Arathiparampil House, Valappad<br>Thrissur District<br>Ph: 8592826270</p>
+          </article>
+
+          <article class="card card--family reveal" data-delay="2">
+            <svg class="ico card-ico" aria-hidden="true">
+              <use href="#i-pillar"></use>
+            </svg>
+            <p class="family-tag">Bride's Family</p>
+            <h3 class="family-name">Manoj</h3>
+            <p class="family-amp">&amp;</p>
+            <h3 class="family-name">Asha Manoj</h3>
+            <p class="family-home">Vadakke Kaithakkad, Arattuchira<br>Payyappadi, Kottayam</p>
+          </article>
+        </div>
+
+        <p class="family-foot reveal" data-delay="3">
+          <svg class="ico" aria-hidden="true">
+            <use href="#i-jasmine"></use>
+          </svg>
+          Together with their families, relatives and well-wishers.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ---------- RECEPTION ---------- -->
+    <!-- <section id="reception" class="scene scene--flow scene--dark">
+      <img class="section-bg" src="assets/images/decorations/wash-dark.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content">
+        <div class="sec-head reveal"> -->
+          <!-- <p class="kicker">Reception</p> -->
+          <!-- <h2 class="sec-title">Reception</h2>
+          <div class="divider divider--light" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-bell"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="temple-card temple-card--dark reveal" data-delay="1">
+          <span class="temple-card__roof" aria-hidden="true"></span>
+          <div class="temple-card__body">
+            <svg class="ico temple-card__crest" aria-hidden="true">
+              <use href="#i-bell"></use>
+            </svg>
+            <p class="tc-eyebrow">You are cordially invited</p>
+            <h3 class="tc-day">Sunday</h3>
+            <p class="tc-date">13 September 2026</p>
+
+            <div class="tc-rule" aria-hidden="true"></div>
+
+            <dl class="tc-list">
+              <div class="tc-row">
+                <dt><svg class="ico">
+                    <use href="#i-clock"></use>
+                  </svg> Time</dt>
+                <dd>5:30 PM – 9:00 PM</dd>
+              </div>
+              <div class="tc-row">
+                <dt><svg class="ico">
+                    <use href="#i-pin"></use>
+                  </svg> Venue</dt>
+                <dd>Eloor Municipality Hall<br>
+                  <span class="muted">Pathalam, Eloor</span>
+                </dd>
+              </div>
+              <div class="tc-row">
+                <dt><svg class="ico">
+                    <use href="#i-jasmine"></use>
+                  </svg> Note</dt>
+                <dd>Join us for celebration and dinner, and bless the couple as they begin their life together.</dd>
+              </div>
+            </dl>
+
+            <a class="btn btn--gold" target="_blank" rel="noopener" href="https://maps.app.goo.gl/eA86mFuXKQ436geg7">
+              <svg class="ico">
+                <use href="#i-pin"></use>
+              </svg> Open in Maps
+            </a>
+          </div>
+          <span class="temple-card__base" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section> -->
+
+
+    <!-- ---------- VENUE ---------- -->
+    <section id="venue" class="scene scene--flow scene--ivory">
+      <img class="section-bg" src="assets/images/decorations/wash-ivory.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content">
+        <div class="sec-head reveal">
+          <p class="kicker">Find Your Way</p>
+          <h2 class="sec-title">Venue &amp; Directions</h2>
+          <div class="divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-pin"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="venue-grid">
+          <article class="venue-card reveal" data-delay="1">
+            <div class="venue-body">
+              <p class="venue-tag">Thalikettu (Muhurtham)</p>
+              <h3 class="venue-name">Manarcaud Devi Temple</h3>
+              <p class="venue-addr">Manarcad, Kottayam, Kerala</p>
+              <p class="venue-when"><svg class="ico">
+                  <use href="#i-clock"></use>
+                </svg>
+                Sun, 13 Sep 2026 · 10:30 AM – 11:30 AM</p>
+              <div class="venue-actions">
+                <a class="btn btn--gold" target="_blank" rel="noopener"
+                  href="https://maps.google.com/?q=Manarcaud+Devi+Temple+Manarcad+Kottayam">
+                  <svg class="ico">
+                    <use href="#i-pin"></use>
+                  </svg> Open in Maps</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="venue-card reveal" data-delay="2">
+            <div class="venue-body">
+              <p class="venue-tag">Dining &amp; Feast</p>
+              <h3 class="venue-name">St. Thomas Orthodox Church Parish Hall</h3>
+              <p class="venue-addr">Arattuchira (Vellukutta), Puthuppally, Kottayam</p>
+              <p class="venue-when"><svg class="ico">
+                  <use href="#i-clock"></use>
+                </svg>
+                Sun, 13 Sep 2026</p>
+              <div class="venue-actions">
+                <a class="btn btn--gold" target="_blank" rel="noopener"
+                  href="https://maps.google.com/?q=St.+Thomas+Orthodox+Church+Parish+Hall+Arattuchira+Puthuppally">
+                  <svg class="ico">
+                    <use href="#i-pin"></use>
+                  </svg> Open in Maps</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="venue-card reveal" data-delay="3">
+            <div class="venue-body">
+              <p class="venue-tag">Grand Reception</p>
+              <h3 class="venue-name">Zahra's International Convention Centre</h3>
+              <p class="venue-addr">Arattuchira / Puthuppally, Kottayam</p>
+              <p class="venue-when"><svg class="ico">
+                  <use href="#i-clock"></use>
+                </svg>
+                Sun, 13 Sep 2026</p>
+              <div class="venue-actions">
+                <a class="btn btn--gold" target="_blank" rel="noopener"
+                  href="https://maps.app.goo.gl/hTz7bE3inXgJxqL96">
+                  <svg class="ico">
+                    <use href="#i-pin"></use>
+                  </svg> Open in Maps</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- GALLERY (COMMENTED OUT) ---------- -->
+    <!-- <section id="gallery" class="scene scene--flow scene--ivory">
+      <img class="section-bg" src="assets/images/decorations/wash-ivory.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="gallery-rays" aria-hidden="true"></div>
+      <div class="section-content">
+        <div class="sec-head reveal">
+          <p class="kicker">Pre-wedding Canvas</p>
+          <h2 class="sec-title">A Few Moments We Cherish</h2>
+          <div class="divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-jasmine"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="photo-wall-stage">
+          <div class="photo-wall__fx" aria-hidden="true">
+            <span class="photo-decor photo-decor--spark a"></span>
+            <span class="photo-decor photo-decor--spark b"></span>
+            <span class="photo-decor photo-decor--spark c"></span>
+            <span class="photo-decor photo-decor--petal d"></span>
+            <span class="photo-decor photo-decor--petal e"></span>
+            <span class="photo-decor photo-decor--dot f"></span>
+            <span class="photo-decor photo-decor--dot g"></span>
+            <span class="photo-decor photo-decor--ray h"></span>
+          </div>
+
+          <div class="photo-wall" id="photoWall" aria-label="Wedding photographs">
+            <figure class="photo-card photo-card--md" data-enter="left" data-speed="0.05"
+              style="--rot:-3.4deg;--nudge-y:18px;--scale:1;--drift-delay:0s;">
+              <div class="photo-card__inner">
+                <div class="photo-card__paper">
+                  <img loading="lazy" decoding="async" src="assets/images/gallery/gallery1.png"
+                    data-placeholder="Photo 01" alt="Sneha and Vivek — cherished moment 1">
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+     
+
+
+
+    <!-- ---------- THANK YOU ---------- -->
+    <section id="thankyou" class="scene scene--flow scene--finale">
+      <img class="section-bg" src="assets/images/decorations/wash-finale.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content section-content--center">
+        <div class="finale-glow" aria-hidden="true"></div>
+        <div class="finale-stage" id="finaleStage">
+          <p class="finale-fallback" id="finaleFallback">THANK YOU</p>
+        </div>
+        <p class="finale-sub reveal">for being a part of our story</p>
+        <p class="finale-ml reveal" data-delay="1">നന്ദി · സ്നേഹത്തോടെ</p>
+      </div>
+    </section>
+
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer id="footer" class="scene scene--flow scene--finale footer">
+      <img class="section-bg" src="assets/images/decorations/wash-finale.svg" alt="" loading="lazy" decoding="async">
+      <div class="section-overlay" aria-hidden="true"></div>
+      <div class="section-content section-content--center">
+
+        <div class="gratitude-card reveal">
+          <p class="gratitude-kicker">Gratitude</p>
+          <div class="divider divider--light divider--sm" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-lotus"></use>
+            </svg>
+            <span class="divider-line"></span>
+          </div>
+          <p class="gratitude-msg">
+            Your family is cordially invited to attend this auspicious event and the subsequent reception.
           </p>
-          <div class="event-actions">
-            <a class="btn-map" target="_blank" rel="noopener"
-               href="https://share.google/jEA27Adtrl7IT5OPm">
-              <i class="fa-solid fa-location-dot"></i> Temple Map
-            </a> 
-            <a class="btn-map" target="_blank" rel="noopener"
-               href="https://share.google/ZVbr23P5BcZa71rXD">
-              <i class="fa-solid fa-utensils"></i> Church Dining Hall Map
-            </a> 
+          <p class="gratitude-names">With love,<br>Vijayan &amp; Lekha Vijayan<br><span style="font-size: 0.85em; font-weight: 300;">Arathiparampil, Valappad, Thrissur</span></p>
+          <p class="gratitude-date">Sunday, 13th September 2026</p>
+          <div class="gratitude-phones">
+            <a href="tel:+918592826270" class="gratitude-phone">
+              <svg class="ico" aria-hidden="true">
+                <use href="#i-phone"></use>
+              </svg>
+              <span>+91 85928 26270 — Vijayan &amp; Lekha</span>
+            </a>
           </div>
         </div>
-      </article>
 
-      <article class="themed-card event-card" data-reveal-stagger>
-        <div class="card-content">
-          <div class="event-icon"><i class="fa-solid fa-wine-glass"></i></div>
-          <p class="event-kicker">Feast &amp; Joy</p>
-          <h3 class="event-title">Wedding Reception</h3>
-          <p class="event-date">Tuesday, 15th September 2026</p>
-          <p class="event-time">5:00 PM – 8:00 PM</p>
-          <p class="event-venue">Zahra's International Convention Centre<br>Palapetty, Kerala</p>
-          <div class="event-actions">
-            <a class="btn-map" target="_blank" rel="noopener"
-               href="https://maps.app.goo.gl/XabaDq6NjFWFY7qj6">
-              <i class="fa-solid fa-location-dot"></i> Open Google Maps
-            </a> 
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
+      </div>
+    </footer>
 
-</main>
+  </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="ashirwad" id="ashirwad">
-  <div class="footer-motif" aria-hidden="true">✿</div>
-  <p class="footer-thanks">With Best Compliments</p>
-  <p class="footer-message">Your family is cordially invited to attend this auspicious event and the subsequent reception.<br><br>
-    <strong>With love,</strong><br>
-    Mr. Vijayan &amp; Mrs. Lekha<br>
-    Arathiparampil, Valappad, Thrissur District
-  </p>
-  <p class="footer-couple">Vivek &amp; Sneha</p>
-</footer>
 
-<!-- ============ FLOATING AUDIO PLAYER ============ -->
-<button class="audio-toggle" id="audioToggle" aria-label="Play wedding music" aria-pressed="false">
-  <i class="fa-solid fa-music"></i>
-</button>
-<audio id="bgAudio" loop preload="none">
-  <source src="neelashalabam.mp3" type="audio/mpeg">
-</audio>
+  <!-- ============================================================
+     AMBIENT AUDIO  ·  starts after cover opens
+     ============================================================ -->
+  <audio id="bgAudio" src="assets/audio/inkem-inkem_g300U6Yp.mp3" preload="auto" loop playsinline></audio>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
-<script src="app.js"></script>
+  <button id="audioBtn" class="audio-disc" type="button" aria-pressed="false" aria-label="Play music" hidden>
+    <span class="audio-disc__glow" aria-hidden="true"></span>
+    <span class="audio-disc__ring" aria-hidden="true"></span>
+    <span class="audio-disc__platter" aria-hidden="true">
+      <span class="audio-disc__grooves"></span>
+      <span class="audio-disc__hub">
+        <span class="audio-disc__mono">V&amp;S</span>
+      </span>
+    </span>
+    <span class="audio-disc__icon" aria-hidden="true">
+      <svg class="audio-disc__play" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5.5v13l11-6.5L8 5.5z" />
+      </svg>
+      <svg class="audio-disc__pause" viewBox="0 0 24 24" fill="currentColor">
+        <rect x="6" y="5" width="4" height="14" rx="1" />
+        <rect x="14" y="5" width="4" height="14" rx="1" />
+      </svg>
+    </span>
+  </button>
+
+  <noscript>
+    <style>
+      #landing,
+      #reveal {
+        display: none !important
+      }
+
+      #site {
+        opacity: 1 !important;
+        visibility: visible !important
+      }
+
+      body {
+        overflow: auto !important
+      }
+
+      .scene--hero {
+        opacity: 1 !important;
+        visibility: visible !important
+      }
+
+      .scene--hero .section-bg,
+      .scene--hero .section-content {
+        opacity: 1 !important;
+        transform: none !important
+      }
+    </style>
+  </noscript>
+
+  <script src="js/particles.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
+
 </html>
