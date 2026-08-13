@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Sneha & Vivek — app.js
+   Vivek & Sneha — app.js
    Countdown engine · Floating audio player · GSAP ScrollTrigger reveals
    ========================================================================== */
 
