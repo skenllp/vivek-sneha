@@ -603,8 +603,8 @@
       </div>
     </section>
 
-    <!-- ---------- GALLERY (COMMENTED OUT) ---------- -->
-    <!-- <section id="gallery" class="scene scene--flow scene--ivory">
+    <!-- ---------- GALLERY ---------- -->
+    <section id="gallery" class="scene scene--flow scene--ivory">
       <img class="section-bg" src="assets/images/decorations/wash-ivory.svg" alt="" loading="lazy" decoding="async">
       <div class="section-overlay" aria-hidden="true"></div>
       <div class="gallery-rays" aria-hidden="true"></div>
@@ -637,16 +637,50 @@
             <figure class="photo-card photo-card--md" data-enter="left" data-speed="0.05"
               style="--rot:-3.4deg;--nudge-y:18px;--scale:1;--drift-delay:0s;">
               <div class="photo-card__inner">
-                <div class="photo-card__paper">
-                  <img loading="lazy" decoding="async" src="assets/images/gallery/gallery1.png"
-                    data-placeholder="Photo 01" alt="Sneha and Vivek — cherished moment 1">
+                <div class="photo-card__paper" tabindex="0" role="button" aria-label="View Groom photo full size">
+                  <img loading="lazy" decoding="async" src="assets/images/gallery/groom.png"
+                    data-placeholder="Groom" alt="Vivek — Groom" data-caption="Vivek — The Groom">
+                  <figcaption class="photo-card__caption">Vivek</figcaption>
+                </div>
+              </div>
+            </figure>
+
+            <figure class="photo-card photo-card--md" data-enter="right" data-speed="-0.04"
+              style="--rot:2.8deg;--nudge-y:-10px;--scale:1;--drift-delay:0.6s;">
+              <div class="photo-card__inner">
+                <div class="photo-card__paper" tabindex="0" role="button" aria-label="View Bride photo full size">
+                  <img loading="lazy" decoding="async" src="assets/images/gallery/bride.png"
+                    data-placeholder="Bride" alt="Sneha — Bride" data-caption="Sneha — The Bride">
+                  <figcaption class="photo-card__caption">Sneha</figcaption>
+                </div>
+              </div>
+            </figure>
+
+            <figure class="photo-card photo-card--lg" data-enter="up" data-speed="0.06"
+              style="--rot:-1.8deg;--nudge-y:14px;--scale:1;--drift-delay:1.2s;">
+              <div class="photo-card__inner">
+                <div class="photo-card__paper" tabindex="0" role="button" aria-label="View Family photo full size">
+                  <img loading="lazy" decoding="async" src="assets/images/gallery/family.png"
+                    data-placeholder="Family" alt="Parents &amp; Family" data-caption="Together with Family">
+                  <figcaption class="photo-card__caption">Parents &amp; Family</figcaption>
+                </div>
+              </div>
+            </figure>
+
+            <figure class="photo-card photo-card--lg" data-enter="left" data-speed="-0.05"
+              style="--rot:3.2deg;--nudge-y:-8px;--scale:1;--drift-delay:1.8s;">
+              <div class="photo-card__inner">
+                <div class="photo-card__paper" tabindex="0" role="button" aria-label="View Family &amp; Loved Ones photo full size">
+                  <img loading="lazy" decoding="async" src="assets/images/gallery/family1.png"
+                    data-placeholder="Family &amp; Friends" alt="Family &amp; Loved Ones" data-caption="Family &amp; Loved Ones">
+                  <figcaption class="photo-card__caption">Family &amp; Loved Ones</figcaption>
                 </div>
               </div>
             </figure>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
 
      
@@ -728,6 +762,20 @@
       </svg>
     </span>
   </button>
+
+  <!-- Lightbox Modal for Gallery Images -->
+  <div id="galleryLightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <div class="lightbox-overlay" data-action="close"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Close modal" data-action="close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous photo" data-action="prev">&#10094;</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo" data-action="next">&#10095;</button>
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
 
   <noscript>
     <style>
