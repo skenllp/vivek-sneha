@@ -710,10 +710,10 @@
   }
 
   /* ---------------------------------------------------------
-     8 · Countdown  ·  13 Sep 2026, 09:45 IST
+     8 · Countdown  ·  13 Sep 2026, 09:59 IST
      --------------------------------------------------------- */
   (function countdown() {
-    var target = new Date('2026-09-13T09:45:00+05:30').getTime();
+    var target = new Date('2026-09-13T09:59:00+05:30').getTime();
     var d = document.getElementById('cdD'),
         h = document.getElementById('cdH'),
         m = document.getElementById('cdM'),
